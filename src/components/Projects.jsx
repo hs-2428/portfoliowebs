@@ -7,7 +7,7 @@ const Projects = () => {
   const projects = [
     {
       title: 'AI Playlist Generator',
-      year: '2024',
+      year: 'Sep 2025',
       description: 'Intelligent playlist generator that creates personalized music playlists based on mood, genre preferences, and listening history.',
       tech: ['JavaScript', 'AI/ML', 'Spotify API', 'Node.js'],
       highlights: [
@@ -20,7 +20,7 @@ const Projects = () => {
     },
     {
       title: 'ML Model Comparison',
-      year: '2024',
+      year: 'Sep 2025',
       description: 'Comprehensive machine learning model comparison framework with detailed metrics, visualizations, and performance analysis.',
       tech: ['Python', 'Scikit-learn', 'TensorFlow', 'Pandas'],
       highlights: [
@@ -33,7 +33,7 @@ const Projects = () => {
     },
     {
       title: 'Weather Dashboard',
-      year: '2024',
+      year: 'Sep 2025',
       description: 'Real-time weather dashboard with API integration, featuring current conditions, forecasts, and interactive weather maps.',
       tech: ['Python', 'Weather API', 'Flask', 'JavaScript'],
       highlights: [
@@ -46,7 +46,7 @@ const Projects = () => {
     },
     {
       title: 'YouTube Liked Videos Remover',
-      year: '2024',
+      year: 'Jul 2025',
       description: 'Automation tool to bulk remove liked videos from YouTube, helping users manage their liked videos collection efficiently.',
       tech: ['Python', 'YouTube API', 'Selenium', 'OAuth'],
       highlights: [
@@ -59,7 +59,7 @@ const Projects = () => {
     },
     {
       title: 'AI Summarizer (Mac)',
-      year: '2023',
+      year: 'Jul 2025',
       description: 'macOS application that uses AI to summarize text content, making it easy to extract key information from documents and articles.',
       tech: ['Python', 'NLP', 'macOS', 'OpenAI'],
       highlights: [
@@ -72,7 +72,7 @@ const Projects = () => {
     },
     {
       title: 'Link Manager',
-      year: '2023',
+      year: 'Jul 2025',
       description: 'Web-based link management tool for organizing and accessing multiple links efficiently with categorization and search.',
       tech: ['HTML', 'CSS', 'JavaScript', 'LocalStorage'],
       highlights: [
@@ -85,7 +85,7 @@ const Projects = () => {
     },
     {
       title: 'Proxy Server with IDS',
-      year: '2023',
+      year: 'Sep 2025',
       description: 'Advanced proxy server implementation with integrated intrusion detection system for network security monitoring.',
       tech: ['Python', 'Networking', 'Security', 'IDS'],
       highlights: [

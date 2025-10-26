@@ -4,6 +4,7 @@ import { useTheme } from '../contexts/ThemeContext'
 const TargetCursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 })
   const [isOverText, setIsOverText] = useState(false)
+  const [isTouchDevice, setIsTouchDevice] = useState(false)
   const { isDark } = useTheme()
   const rafId = useRef(null)
   const cursorRef = useRef(null)
@@ -19,6 +20,12 @@ const TargetCursor = () => {
   }, [])
 
   useEffect(() => {
+    // Detect touch device
+    const checkTouchDevice = () => {
+      setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0)
+    }
+    checkTouchDevice()
+
     const handleMouseMove = (e) => {
       if (rafId.current) {
         cancelAnimationFrame(rafId.current)
@@ -48,6 +55,11 @@ const TargetCursor = () => {
       }
     }
   }, [updatePosition])
+
+  // Don't render cursor on touch devices
+  if (isTouchDevice) {
+    return null
+  }
 
   return (
     <>

@@ -32,11 +32,11 @@ const Hero = () => {
     return () => document.removeEventListener('mousemove', handleMouseMove)
   }, [])
 
-  const name = "Harsh.S"
+  const name = "Harsh.Sharma"
   
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center px-6 pt-20">
-      <div className="text-center">
+      <div className="text-center max-w-full overflow-x-hidden">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -44,7 +44,7 @@ const Hero = () => {
         >
           <h1
             ref={nameRef}
-            className="text-7xl md:text-9xl font-bold mb-6 select-none whitespace-nowrap"
+            className="text-4xl sm:text-6xl md:text-7xl lg:text-9xl font-bold mb-6 select-none whitespace-nowrap"
             style={{ letterSpacing: '0.05em' }}
           >
             {name.split('').map((char, i) => (

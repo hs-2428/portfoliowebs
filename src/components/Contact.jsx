@@ -30,7 +30,7 @@ const Contact = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="text-5xl md:text-7xl font-bold mb-12 text-center"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-12 text-center whitespace-nowrap"
           style={{ perspective: "1000px" }}
         >
           {title.split('').map((char, index) => (
