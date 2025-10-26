@@ -5,10 +5,12 @@ dist-ssr
 *.local
 
 # Editor
-.vscode/*
-!.vscode/extensions.json
+.vscode/
 .idea
 .DS_Store
+
+# GitHub (keep workflows for deployment)
+.github/copilot-instructions.md
 *.suo
 *.ntvs*
 *.njsproj
