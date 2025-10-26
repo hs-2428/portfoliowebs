@@ -32,7 +32,7 @@ const Hero = () => {
     return () => document.removeEventListener('mousemove', handleMouseMove)
   }, [])
 
-  const name = "Harsh.Sharma"
+  const name = "Harsh.S"
   
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center px-6 pt-20">
@@ -44,7 +44,7 @@ const Hero = () => {
         >
           <h1
             ref={nameRef}
-            className="text-7xl md:text-9xl font-bold mb-6 select-none"
+            className="text-7xl md:text-9xl font-bold mb-6 select-none whitespace-nowrap"
             style={{ letterSpacing: '0.05em' }}
           >
             {name.split('').map((char, i) => (
@@ -57,17 +57,9 @@ const Hero = () => {
               </span>
             ))}
           </h1>
-          <p className="text-xl md:text-2xl text-gray-400 mb-8">
+          <p className="text-xl md:text-2xl text-gray-400">
             Curious Mind & Developer
           </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => document.getElementById('timeline').scrollIntoView({ behavior: 'smooth' })}
-            className="px-8 py-3 bg-white text-black font-medium rounded-full hover:bg-gray-200 transition-colors"
-          >
-            Explore My Journey
-          </motion.button>
         </motion.div>
       </div>
     </section>
