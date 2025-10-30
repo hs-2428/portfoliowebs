@@ -41,14 +41,14 @@ const Navigation = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-black/20 backdrop-blur-md border-b border-gray-200 dark:border-white/10 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
-        <div className="flex justify-between items-center">
-          <ul className="flex items-center space-x-0.5 sm:space-x-1 overflow-x-auto scrollbar-hide">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 py-2 sm:py-3">
+        <div className="flex justify-start items-center gap-1">
+          <ul className="flex items-center space-x-0.5 overflow-x-auto scrollbar-hide flex-shrink-0">
             {navItems.map((item, index) => (
               <li key={item.id} className="flex-shrink-0">
                 <motion.button
                   onClick={() => scrollToSection(item.id)}
-                  className={`text-xs sm:text-sm font-medium transition-all duration-300 whitespace-nowrap px-3 sm:px-4 py-2 rounded-lg border ${
+                  className={`text-xs sm:text-sm font-medium transition-all duration-300 whitespace-nowrap px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 rounded-lg border text-nowrap ${
                     activeSection === item.id 
                       ? 'text-gray-900 dark:text-white bg-gray-200 dark:bg-gray-700 border-gray-400 dark:border-gray-500' 
                       : 'text-gray-600 dark:text-gray-300 bg-transparent border-transparent hover:bg-gray-100 dark:hover:bg-gray-800 hover:border-gray-300 dark:hover:border-gray-600'
@@ -64,7 +64,7 @@ const Navigation = () => {
           <div className="ml-auto flex-shrink-0">
             <motion.button
               onClick={toggleTheme}
-              className="w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-colors"
+              className="w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center transition-colors"
               style={{
                 background: isDark 
                   ? 'rgba(255, 255, 255, 0.1)' 
