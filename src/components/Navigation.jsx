@@ -43,22 +43,24 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-black/20 backdrop-blur-md border-b border-gray-200 dark:border-white/10 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex justify-between items-center">
-          <div className="hidden md:flex flex-1" />
-          <ul className="flex justify-center space-x-3 sm:space-x-6 md:space-x-8 overflow-x-auto scrollbar-hide flex-1 md:flex-initial">
-            {navItems.map((item) => (
-              <li key={item.id} className="flex-shrink-0">
+          <ul className="flex items-center space-x-0 overflow-x-auto scrollbar-hide">
+            {navItems.map((item, index) => (
+              <li key={item.id} className="flex-shrink-0 flex items-center">
                 <button
                   onClick={() => scrollToSection(item.id)}
-                  className={`text-xs sm:text-sm font-medium transition-all duration-300 hover:text-gray-900 dark:hover:text-white whitespace-nowrap ${
+                  className={`text-xs sm:text-sm font-medium transition-all duration-300 hover:text-gray-900 dark:hover:text-white whitespace-nowrap px-3 sm:px-4 py-1 ${
                     activeSection === item.id ? 'text-gray-900 dark:text-white' : 'text-gray-500 dark:text-gray-400'
                   }`}
                 >
                   {item.label}
                 </button>
+                {index < navItems.length - 1 && (
+                  <div className="w-px h-4 bg-gray-300 dark:bg-gray-600 opacity-30 mx-1 sm:mx-2" />
+                )}
               </li>
             ))}
           </ul>
-          <div className="flex-shrink-0 ml-3 sm:ml-4 md:ml-0 md:flex-1 md:flex md:justify-end">
+          <div className="ml-auto flex-shrink-0">
             <motion.button
               onClick={toggleTheme}
               className="w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-colors"
