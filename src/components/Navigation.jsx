@@ -55,7 +55,7 @@ const Navigation = () => {
                   {item.label}
                 </button>
                 {index < navItems.length - 1 && (
-                  <div className="w-px h-4 bg-gray-300 dark:bg-gray-600 opacity-30 mx-1 sm:mx-2" />
+                  <div className="w-0.5 h-5 bg-gray-400 dark:bg-gray-500 opacity-50 mx-2 sm:mx-3" />
                 )}
               </li>
             ))}
