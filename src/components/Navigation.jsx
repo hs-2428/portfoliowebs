@@ -43,20 +43,21 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-black/20 backdrop-blur-md border-b border-gray-200 dark:border-white/10 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex justify-between items-center">
-          <ul className="flex items-center space-x-0 overflow-x-auto scrollbar-hide">
+          <ul className="flex items-center space-x-0.5 sm:space-x-1 overflow-x-auto scrollbar-hide">
             {navItems.map((item, index) => (
-              <li key={item.id} className="flex-shrink-0 flex items-center">
-                <button
+              <li key={item.id} className="flex-shrink-0">
+                <motion.button
                   onClick={() => scrollToSection(item.id)}
-                  className={`text-xs sm:text-sm font-medium transition-all duration-300 hover:text-gray-900 dark:hover:text-white whitespace-nowrap px-3 sm:px-4 py-1 ${
-                    activeSection === item.id ? 'text-gray-900 dark:text-white' : 'text-gray-500 dark:text-gray-400'
+                  className={`text-xs sm:text-sm font-medium transition-all duration-300 whitespace-nowrap px-3 sm:px-4 py-2 rounded-lg border ${
+                    activeSection === item.id 
+                      ? 'text-gray-900 dark:text-white bg-gray-200 dark:bg-gray-700 border-gray-400 dark:border-gray-500' 
+                      : 'text-gray-600 dark:text-gray-300 bg-transparent border-transparent hover:bg-gray-100 dark:hover:bg-gray-800 hover:border-gray-300 dark:hover:border-gray-600'
                   }`}
+                  whileHover={{ scale: 1.05, backgroundColor: 'rgba(229, 231, 235, 0.5)' }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   {item.label}
-                </button>
-                {index < navItems.length - 1 && (
-                  <div className="w-0.5 h-5 bg-gray-400 dark:bg-gray-500 opacity-50 mx-2 sm:mx-3" />
-                )}
+                </motion.button>
               </li>
             ))}
           </ul>
